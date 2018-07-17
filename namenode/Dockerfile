@@ -9,6 +9,7 @@ VOLUME /hadoop/dfs/name
 
 RUN curl -o /opt/pig-0.17.0.tar.gz --create-dirs http://mirror.bit.edu.cn/apache/pig/latest/pig-0.17.0.tar.gz
 RUN tar -xzf /opt/pig-0.17.0.tar.gz -C /opt
+ENV PIG_INSTALL=/opt/pig-0.17.0 PATH=$PATH:$PIG_INSTALL/bin HADOOP_HOME=/opt/hadoop-2.7.1 PIG_CLASSPATH=$HADOOP_HOME/etc/hadoop
 
 ADD run.sh /run.sh
 RUN chmod a+x /run.sh

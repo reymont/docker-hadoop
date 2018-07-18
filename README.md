@@ -15,6 +15,7 @@ Version 1.1.0 introduces healthchecks for the containers.
 To deploy an example HDFS cluster, run:
 ```
   docker-compose up
+  docker-compose -f docker-compose-local.yml up -d
 ```
 
 `docker-compose` creates a docker network that can be found by running `docker network list`, e.g. `dockerhadoop_default`.

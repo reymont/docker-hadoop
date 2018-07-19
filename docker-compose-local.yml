@@ -67,7 +67,7 @@ services:
     links:
       - "namenode"
     ports:
-      - "50075:50075"
+      - "50175:50075"
     volumes:
       - ./data/datanode1:/hadoop/dfs/data
     env_file:
@@ -82,7 +82,7 @@ services:
     links:
       - "namenode"
     ports:
-      - "50075:50075"
+      - "50275:50075"
     volumes:
       - ./data/datanode2:/hadoop/dfs/data
     env_file:
@@ -97,7 +97,7 @@ services:
     links:
       - "namenode"
     ports:
-      - "50075:50075"
+      - "50375:50075"
     volumes:
       - ./data/datanode3:/hadoop/dfs/data
     env_file:

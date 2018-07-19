@@ -15,6 +15,8 @@ RUN curl -o /opt/apache-mahout-distribution-0.12.2.tar.gz --create-dirs http://m
 RUN tar -xzf /opt/apache-mahout-distribution-0.12.2.tar.gz -C /opt
 ENV MAHOUT_HOME=/opt/apache-mahout-distribution-0.12.2 MAHOUT_CONF_DIR=/opt/apache-mahout-distribution-0.12.2/conf PATH=/opt/apache-mahout-distribution-0.12.2/conf:/opt/apache-mahout-distribution-0.12.2/bin:$PATH
 
+RUN apt-get upate && apt-get install vim
+
 ADD run.sh /run.sh
 RUN chmod a+x /run.sh
 

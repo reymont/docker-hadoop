@@ -9,6 +9,8 @@ services:
       - ./data/namenode:/hadoop/dfs/name
     environment:
       - CLUSTER_NAME=test
+    ports:
+      - "8020:8020"
     env_file:
       - ./hadoop.env
 

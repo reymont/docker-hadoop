@@ -24,7 +24,7 @@ services:
     links:
       - "namenode"
     ports:
-      - "8088:8088"
+      - "58088:8088"
     env_file:
       - ./hadoop.env
 
@@ -39,7 +39,7 @@ services:
     links:
       - "namenode"
     ports:
-      - "8188:8188"
+      - "58188:8188"
     env_file:
       - ./hadoop.env
 
@@ -54,7 +54,7 @@ services:
       - "namenode"
       - "resourcemanager"
     ports:
-      - "8042:8042"
+      - "58042:8042"
     env_file:
       - ./hadoop.env
 
@@ -66,6 +66,8 @@ services:
       - "namenode"
     links:
       - "namenode"
+    ports:
+      - "50075:50075"
     volumes:
       - ./data/datanode1:/hadoop/dfs/data
     env_file:
@@ -79,6 +81,8 @@ services:
       - "namenode"
     links:
       - "namenode"
+    ports:
+      - "50075:50075"
     volumes:
       - ./data/datanode2:/hadoop/dfs/data
     env_file:
@@ -92,6 +96,8 @@ services:
       - "namenode"
     links:
       - "namenode"
+    ports:
+      - "50075:50075"
     volumes:
       - ./data/datanode3:/hadoop/dfs/data
     env_file:
